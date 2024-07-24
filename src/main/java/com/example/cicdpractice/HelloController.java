@@ -11,6 +11,7 @@ public class HelloController {
     public String hello() {
 
         log.debug("hello sl4j");
+        log.debug("feat9");
 
         return "hello";
     }
