@@ -10,7 +10,7 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello() {
 
-        log.debug("feat10");
+        log.debug("feat8");
 
         return "hello";
     }
