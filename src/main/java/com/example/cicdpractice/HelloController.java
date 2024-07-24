@@ -10,8 +10,6 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello() {
 
-        log.debug("hello sl4j");
-        log.debug("feat9");
         log.debug("feat10");
 
         return "hello";
