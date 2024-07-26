@@ -11,4 +11,4 @@ WORKDIR /app
 COPY ${JAR_FILE} app.jar
 
 # 애플리케이션 실행
-ENTRYPOINT ["java", "-jar", "hello_key=${hello_key}", "app.jar"]
+ENTRYPOINT ["java", "-Dhello_key=${hello_key}", "-jar", "app.jar"]
