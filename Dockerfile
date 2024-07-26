@@ -11,4 +11,4 @@ WORKDIR /app
 COPY ${JAR_FILE} app.jar
 
 # 애플리케이션 실행
-ENTRYPOINT ["java", "-Dencryptor.key=${HELLO_KEY}", "-Dspring.profiles.active=${PROFILES}", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=${PROFILES}", "-jar", "app.jar"]
