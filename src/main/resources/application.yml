@@ -1,2 +1,65 @@
+spring:
+  profiles:
+    active: local
+    group:
+      local: local, common
+      blue: blue, common
+      green: green, common
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(0aKS6IhXIdLo6243zeZMNZTRHJG+dywv38HoqdJ5GahHyJanlIIVtp2+YhVUpXFEjMKHo3Pwxzw=)
+    username: root
+    password: ENC(YmRAa+yfdS705zv/XzYTOWpIsQhhtnQw)
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+encryptor:
+  key: ${hello_key}
+
 server:
-  port: 9090
+  env: blue
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+
+server:
+  port: 8080
+  serverAddress: localhost
+
+serverName: localhost
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: blue
+
+server:
+  port: 8080
+  serverAddress: 3.34.206.95
+
+serverName: blue_server
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: green
+
+server:
+  port: 8081
+  serverAddress: 3.34.206.95
+
+serverName: green_server
+
+---
