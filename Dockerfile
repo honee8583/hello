@@ -10,7 +10,5 @@ WORKDIR /app
 # 애플리케이션 JAR 파일을 컨테이너로 복사
 COPY ${JAR_FILE} app.jar
 
-ENV HELLO_KEY=${HELLO_KEY}
-
 # 애플리케이션 실행
 ENTRYPOINT ["java", "-Dhello_key=${HELLO_KEY}", "-Dspring.profiles.active=${PROFILES}", "-jar", "app.jar"]
