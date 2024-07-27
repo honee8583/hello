@@ -12,6 +12,6 @@ public class HelloController {
 
         log.debug("feat10");
 
-        return "hello";
+        return "hello nginx testing";
     }
 }
