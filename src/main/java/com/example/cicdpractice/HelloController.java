@@ -23,6 +23,11 @@ public class HelloController {
     @Value("${serverName}")
     private String serverName;
 
+    @GetMapping("/hello")
+    public ResponseEntity<?> hello() {
+        return ResponseEntity.ok("hello");
+    }
+
     @GetMapping("/hc")
     public ResponseEntity<?> healthCheck() {
         Map<String, String> responseData = new HashMap<>();
