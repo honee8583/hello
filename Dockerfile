@@ -3,6 +3,8 @@ FROM openjdk:17-jdk-slim
 
 # 애플리케이션 JAR 파일의 이름
 ARG JAR_FILE=build/libs/*.jar
+ARG HELLO_KEY
+ARG PROFILES
 
 # 컨테이너 내 작업 디렉토리 설정
 WORKDIR /app
@@ -11,4 +13,4 @@ WORKDIR /app
 COPY ${JAR_FILE} app.jar
 
 # 애플리케이션 실행
-ENTRYPOINT ["java", "-Dspring.profiles.active=${PROFILES}", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dencryptor.key=${HELLO_KEY}", "-Dspring.profiles.active=${PROFILES}", "-jar", "app.jar"]
