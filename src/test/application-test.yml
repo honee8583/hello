@@ -1,0 +1,2 @@
+encryptor:
+  key: ${hello_key}
