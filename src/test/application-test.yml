@@ -9,5 +9,6 @@ encryptor:
 server:
   port: 8080
   serverAddress: localhost
+  env: blue
 
 serverName: localhost
