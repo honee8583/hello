@@ -25,7 +25,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public ResponseEntity<?> hello() {
-        return ResponseEntity.ok("hello");
+        return ResponseEntity.ok("hello2");
     }
 
     @GetMapping("/hc")
