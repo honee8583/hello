@@ -44,6 +44,7 @@ spring:
       on-profile: blue
 
 server:
+  env: blue
   port: 8080
   serverAddress: 3.34.206.95
 
@@ -57,6 +58,7 @@ spring:
       on-profile: green
 
 server:
+  env: green
   port: 8081
   serverAddress: 3.34.206.95
 
