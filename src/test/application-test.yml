@@ -1,2 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+
 encryptor:
   key: ${hello_key}
+
+server:
+  port: 8080
+  serverAddress: localhost
+
+serverName: localhost
